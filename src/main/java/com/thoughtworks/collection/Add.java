@@ -71,10 +71,8 @@ public class Add {
                 .filter(n -> (n & 1) == 0)
                 .sorted()
                 .collect(Collectors.toList());
-        int size = evenList.size();
-        return (size & 1) == 1 ?
-                evenList.get(size / 2)
-                : (evenList.get(size / 2 - 1) + evenList.get(size / 2)) / 2.0;
+        int count = evenList.size();
+        return (evenList.get((count - 1) / 2) + evenList.get(count / 2)) / 2.0;
     }
 
     public double getAverageOfEven(List<Integer> arrayList) {
